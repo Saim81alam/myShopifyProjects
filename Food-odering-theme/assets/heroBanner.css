@@ -6,8 +6,6 @@
 }
 
 .hero-banner__image-side {
-  width: 80%;
-  height: 80%;
   overflow: hidden;
 }
 
@@ -19,6 +17,8 @@
 }
 
 .hero-banner .hero-banner__image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
