@@ -1,8 +1,7 @@
 .hero-banner {
   display: grid;
-  justify-content: center;
   grid-template-columns: 1fr 1fr;
-  min-height: 60vh;
+  height:60vh;
   background-color: #f7f7f7;
 }
 
@@ -14,10 +13,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px;
+  align-items:center;
+  padding: 40px;
 }
 
-.hero-banner .hero-banner__image {
+.hero-banner__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -55,6 +55,7 @@
 /* Responsive design ke liye Media Query */
 @media (max-width: 990px) {
   .hero-banner {
+    /* Jab screen choti ho, toh single column mein stack kare */
     grid-template-columns: 1fr;
     min-height: initial;
   }

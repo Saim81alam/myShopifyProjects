@@ -11,7 +11,13 @@
   "sections": {
     "main": {
       "type": "heroBanner",
-      "settings": {}
+      "settings": {
+        "image": "shopify://shop_images/HERO_BANNER.jpg",
+        "heading": "TASTE THE JOY",
+        "subtext": "Fresh, Delicious Meals Delivered to Your Door",
+        "button_label": "ORDER NOW",
+        "button_link": ""
+      }
     }
   },
   "order": [

@@ -7,13 +7,14 @@
 
 .container {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns:auto 1fr auto;
   align-items: center;
   width: 100%;
   padding: 15px 30px;
   background: #333;
   border-bottom: 1px solid #eee;
 }
+
 
 .logo img {
   max-width: 150px;
@@ -24,13 +25,13 @@
   color: #fff;
 }
 
+
 .nav-wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   gap: 25px;
-  grid-column: 2;
 }
 
 .main-nav ul {
@@ -39,19 +40,8 @@
   list-style: none;
 }
 
-.main-nav a {
-  font-weight: 500;
-  color: #fff;
-}
-
-.main-nav a:hover {
-  color: #c1bcbc;
-}
-
-.cart a sup {
-  font-size: medium;
-  font-weight: 400;
-  color: rgb(247, 26, 44);
+.cart {
+  align-self: flex-end; 
 }
 
 .menu-toggle {
@@ -59,40 +49,40 @@
   font-size: 28px;
   color: #fff;
   cursor: pointer;
-  grid-column: 3;
 }
 
+/* ========== Responsive ========== */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    justify-self: end;
   }
 
   .container {
     grid-template-columns: auto auto;
   }
 
+ 
   .nav-wrapper {
-    grid-column: 1 / span 2;
-
     display: none;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
-    width: 100%;
+    width: 25%;
     background: #222;
     position: absolute;
-    top: 60px;
-    left: 0;
+    top: 65px;
+    right: 0;
     padding: 20px 0;
     animation: slideDown 0.3s ease-in-out;
     z-index: 100;
-
-    justify-content: center;
   }
 
+  /* Show on toggle click */
   .nav-wrapper.active {
     display: flex;
   }
 
+  /* Menu styling in mobile */
   .main-nav ul {
     flex-direction: column;
     gap: 15px;
@@ -103,6 +93,7 @@
     font-size: 18px;
   }
 
+  /* Cart styling (👇 this makes cart appear below menu) */
   .cart {
     margin-top: 15px;
     font-size: 20px;
