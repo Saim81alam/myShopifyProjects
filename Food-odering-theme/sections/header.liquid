@@ -1,4 +1,5 @@
 {{ 'header.css' | asset_url | stylesheet_tag }}
+
 <header class="site-header">
   <div class="container">
     <!-- Logo -->
@@ -12,7 +13,7 @@
       {% endif %}
     </div>
 
-    <!-- Hamburger Icon -->
+    <!-- Icon -->
     <div class="menu-toggle" id="menu-toggle">☰</div>
 
     <!-- Navigation + Cart Wrapper -->
@@ -47,5 +48,3 @@
     });
   });
 </script>
-
-{% schema %} { "name": "Header", "settings": [ { "type": "image_picker", "id": "logo", "label": "Logo" }, { "type": "link_list", "id": "menu", "label": "Navigation Menu", "default": "main-menu" } ] } {% endschema %}

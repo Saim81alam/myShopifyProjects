@@ -6,8 +6,8 @@
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   width: 100%;
   padding: 15px 30px;
@@ -24,13 +24,13 @@
   color: #fff;
 }
 
-/* Navigation and Cart Layout */
 .nav-wrapper {
-  width: 60%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  width: 80%;
   gap: 25px;
+  grid-column: 2;
 }
 
 .main-nav ul {
@@ -54,31 +54,39 @@
   color: rgb(247, 26, 44);
 }
 
-/* Hamburger Icon */
 .menu-toggle {
   display: none;
   font-size: 28px;
   color: #fff;
   cursor: pointer;
+  grid-column: 3;
 }
 
-/* 🔹 Responsive Styling */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
+  .container {
+    grid-template-columns: auto auto;
+  }
+
   .nav-wrapper {
+    grid-column: 1 / span 2;
+
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 100%;
     background: #222;
     position: absolute;
-    top: 4rem;
-    right: 0;
+    top: 60px;
+    left: 0;
     padding: 20px 0;
     animation: slideDown 0.3s ease-in-out;
+    z-index: 100;
+
+    justify-content: center;
   }
 
   .nav-wrapper.active {
@@ -88,6 +96,7 @@
   .main-nav ul {
     flex-direction: column;
     gap: 15px;
+    align-items: center;
   }
 
   .main-nav a {
