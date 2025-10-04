@@ -1,0 +1,110 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 30px;
+  background: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.logo img {
+  max-width: 150px;
+}
+
+.atag {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Navigation and Cart Layout */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.main-nav a {
+  font-weight: 500;
+  color: #fff;
+}
+
+.main-nav a:hover {
+  color: #c1bcbc;
+}
+
+.cart a sup {
+  font-size: medium;
+  font-weight: 400;
+  color: rgb(247, 26, 44);
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 🔹 Responsive Styling */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-wrapper {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: #222;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px 0;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  .nav-wrapper.active {
+    display: flex;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+  }
+
+  .cart {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
