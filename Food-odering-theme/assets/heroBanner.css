@@ -6,6 +6,8 @@
 }
 
 .hero-banner__image-side {
+  width: 80%;
+  height: 80%;
   overflow: hidden;
 }
 
