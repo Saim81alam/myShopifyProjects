@@ -26,7 +26,9 @@
 
 /* Navigation and Cart Layout */
 .nav-wrapper {
+  width: 60%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 25px;
 }
@@ -70,11 +72,11 @@
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 30%;
     background: #222;
     position: absolute;
-    top: 70px;
-    left: 0;
+    top: 4rem;
+    right: 0;
     padding: 20px 0;
     animation: slideDown 0.3s ease-in-out;
   }
